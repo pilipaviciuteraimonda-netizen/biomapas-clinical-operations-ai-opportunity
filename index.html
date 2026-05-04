@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Biomapas Clinical Research/Operations — AI &amp; Innovation Opportunity Analysis</title>
+<meta name="description" content="Strategic Briefing — May 2026. A grounded analysis of where AI and automation can create measurable value in Biomapas's Clinical Research/Operations vertical." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --bg-alt: #efece4;
+    --ink: #14181d;
+    --ink-soft: #2c333b;
+    --muted: #5b6470;
+    --rule: #d9d4c7;
+    --accent: #14463a;       /* deep clinical green */
+    --accent-soft: #1f6552;
+    --highlight: #b8895a;    /* warm accent */
+    --danger: #8a2a2a;
+    --paper: #ffffff;
+    --shadow: 0 1px 0 rgba(20,24,29,0.04), 0 12px 40px -24px rgba(20,24,29,0.18);
+    --maxw: 1120px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01","ss02","cv11";
+  }
+
+  ::selection { background: var(--accent); color: #f6f4ef; }
+
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(20,70,58,0.3); }
+  a:hover { border-bottom-color: var(--accent); }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(140%) blur(8px);
+    background: rgba(246,244,239,0.9);
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+  }
+  .brand span { color: var(--accent); }
+  .meta {
+    color: var(--muted);
+    display: flex;
+    gap: 20px;
+  }
+  .meta .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); display: inline-block;
+    margin-right: 8px; vertical-align: middle;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%;
+    height: 100%;
+    background:
+      radial-gradient(circle at 80% 30%, rgba(20,70,58,0.08), transparent 60%),
+      radial-gradient(circle at 60% 80%, rgba(184,137,90,0.07), transparent 55%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .eyebrow .line {
+    flex: 0 0 60px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.5;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5.4vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin: 0 0 28px;
+    max-width: 940px;
+    color: var(--ink);
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .lede {
+    font-size: clamp(17px, 1.5vw, 19px);
+    color: var(--ink-soft);
+    max-width: 780px;
+    line-height: 1.55;
+    margin: 0 0 40px;
+  }
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    max-width: 940px;
+  }
+  .hero-meta div {
+    font-size: 13px;
+  }
+  .hero-meta dt {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .hero-meta dd {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ---------- NOTE / CALLOUT ---------- */
+  .note {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--highlight);
+    padding: 22px 28px;
+    margin: 56px 0 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .note strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 88px 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: 0; }
+
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .section-label .num {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 36px;
+    max-width: 880px;
+    color: var(--ink);
+  }
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 36px 0 14px;
+    color: var(--ink);
+  }
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 28px 0 10px;
+  }
+  p { margin: 0 0 18px; color: var(--ink-soft); }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  .prose { max-width: 760px; }
+  .prose-wide { max-width: 920px; }
+
+  /* ---------- KEY STATS ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    margin: 32px 0 8px;
+    border-radius: 2px;
+  }
+  .stat {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+  }
+  .stat:last-child { border-right: 0; }
+  .stat .val {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+  .stat .label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---------- TIER CARDS ---------- */
+  .tier-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin: 48px 0 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .tier-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .tier-tag.t2 { background: var(--accent-soft); }
+  .tier-tag.t3 { background: var(--highlight); }
+  .tier-header h3 {
+    margin: 0;
+    flex: 1;
+  }
+
+  .opp {
+    padding: 24px 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .opp:last-child { border-bottom: 0; }
+  .opp h4 {
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0 0 10px;
+  }
+  .opp p { font-size: 15px; }
+  .impact {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    background: rgba(20,70,58,0.07);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  /* ---------- TABLE ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--paper);
+    margin: 24px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 820px;
+  }
+  thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg-alt);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody td:first-child {
+    font-weight: 600;
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+  }
+  .priority {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  .p-now { background: var(--accent); color: var(--bg); }
+  .p-mid { background: rgba(20,70,58,0.12); color: var(--accent); }
+  .p-late { background: rgba(184,137,90,0.18); color: #6e4d28; }
+
+  /* ---------- TIMELINE / ROLE ---------- */
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .phase {
+    background: var(--paper);
+    padding: 28px 26px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    position: relative;
+  }
+  .phase .horizon {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .phase h4 {
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0 0 14px;
+  }
+  .phase p { font-size: 14px; margin: 0; line-height: 1.55; }
+  .phase .step-num {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    color: var(--rule);
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  /* ---------- QUESTIONS LIST ---------- */
+  .questions {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    counter-reset: q;
+  }
+  .questions li {
+    padding: 22px 0 22px 56px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    counter-increment: q;
+  }
+  .questions li:last-child { border-bottom: 0; }
+  .questions li::before {
+    content: counter(q, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 22px;
+    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .questions strong {
+    display: block;
+    color: var(--ink);
+    font-size: 16px;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .questions p { margin: 0; font-size: 15px; }
+
+  /* ---------- REVENUE ---------- */
+  .rev-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .rev-card {
+    border-top: 3px solid var(--accent);
+    padding: 24px 0 0;
+  }
+  .rev-card.med { border-top-color: var(--accent-soft); }
+  .rev-card.low { border-top-color: var(--highlight); }
+  .rev-card .certainty {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .rev-card h4 {
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0 0 12px;
+  }
+  .rev-card p { font-size: 14px; line-height: 1.55; margin: 0; }
+
+  /* ---------- CONCLUSION ---------- */
+  .conclusion {
+    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+    padding: 96px 0 80px;
+  }
+  .conclusion h2 { color: var(--accent); }
+  .pull {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 36px 0;
+    padding: 28px 32px;
+    border-left: 3px solid var(--accent);
+    background: var(--paper);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+  }
+  .pull em { color: var(--accent); font-style: italic; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--ink);
+    color: #c9cdd2;
+    padding: 64px 0 40px;
+    font-size: 14px;
+  }
+  footer h5 {
+    color: #f6f4ef;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 16px;
+    letter-spacing: -0.005em;
+  }
+  footer p { color: #9aa1a8; line-height: 1.6; margin: 0 0 14px; font-size: 13px; }
+  footer .sources {
+    border-top: 1px solid #2c333b;
+    padding-top: 28px;
+    margin-top: 36px;
+  }
+  footer .sig {
+    border-top: 1px solid #2c333b;
+    margin-top: 40px;
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer .sig .author {
+    font-family: 'Fraunces', serif;
+    color: #f6f4ef;
+    font-size: 16px;
+    font-style: italic;
+  }
+  footer .sig .author span {
+    font-style: normal;
+    color: #9aa1a8;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .sig .legal {
+    color: #6c7178;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .stats, .phases, .rev-grid { grid-template-columns: 1fr; }
+    .stat { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .stat:last-child { border-bottom: 0; }
+    .hero-meta { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .topbar-inner .meta { display: none; }
+    section { padding: 64px 0; }
+    .hero { padding: 64px 0 48px; }
+    .wrap { padding: 0 22px; }
+    .topbar-inner { padding: 12px 22px; }
+  }
+  @media (max-width: 560px) {
+    .hero-meta { grid-template-columns: 1fr; }
+    .questions li { padding-left: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Biomapas <span>·</span> Strategic Briefing</div>
+    <div class="meta">
+      <span><span class="dot"></span>May 2026</span>
+      <span>Confidential — Leadership Review</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="line"></span>Clinical Research / Operations Vertical</div>
+    <h1>Biomapas Clinical Research/Operations: <em>AI &amp; Innovation Opportunity Analysis</em></h1>
+    <p class="lede">A grounded analysis of where automation and AI augmentation can create measurable operational and commercial value in Biomapas's Clinical Research/Operations vertical — and where they cannot yet, and why. Structured to support an informed leadership decision on a Head of Research &amp; Innovation function.</p>
+
+    <dl class="hero-meta">
+      <div><dt>Document Type</dt><dd>Strategic Briefing</dd></div>
+      <div><dt>Date</dt><dd>May 2026</dd></div>
+      <div><dt>Vertical</dt><dd>Clinical Research / Operations</dd></div>
+      <div><dt>Audience</dt><dd>Biomapas Leadership</dd></div>
+    </dl>
+
+    <div class="note">
+      <strong>A note before you read.</strong> This document is built from publicly available information — Biomapas's published service architecture and regulatory framework documentation. It is intentionally structured as a hypothesis set, not a findings report.
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">00</span>Executive Summary</div>
+    <h2>The opportunity is real, the constraints are real, and the two need to be held together.</h2>
+
+    <div class="prose">
+      <p>This document provides a grounded analysis of the Clinical Research/Operations vertical at Biomapas, examined specifically through the lens of where automation and AI augmentation can create measurable operational and commercial value — and where they cannot yet, and why. It is structured to support an informed leadership decision on whether establishing a Head of Research &amp; Innovation function makes strategic sense, what that function would realistically own, and what the sequencing of work should be.</p>
+
+      <p>The core finding is straightforward. The global AI-based clinical trials solution market is valued at approximately <strong>$3.5 billion in 2026</strong> and projected to reach <strong>$30 billion by 2034</strong> at a CAGR of 30.9%. Large CROs — IQVIA, ICON, Thermo Fisher PPD — are already deploying agentic AI in production environments across protocol automation, safety operations, and central monitoring. Veeva Systems has scheduled AI agent releases across all clinical applications through 2026, including Vault Safety (April 2026), Clinical Operations and Regulatory (August 2026), and Clinical Data (December 2026). <strong>The industry is not waiting.</strong></p>
+
+      <p>Biomapas's competitive position in this environment is specific: it is a specialist, regional CRO with genuine depth in CEE/EU markets, a strong early-phase oncology service line, and 20+ years of accumulated operational intelligence that constitutes a proprietary data asset no generalist platform can replicate quickly. That is the strategic foundation from which an innovation agenda must be built — not generic AI adoption, but targeted, legally compliant, operationally grounded capability-building that differentiates Biomapas in bid defense and improves margin per study.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="val">$3.5B → $30B</div><div class="label">AI Clinical Trials Solution Market, 2026 → 2034</div></div>
+      <div class="stat"><div class="val">30.9%</div><div class="label">CAGR — AI Clinical Trials Solutions</div></div>
+      <div class="stat"><div class="val">55%</div><div class="label">Of Health Tech VC Funding in AI (2025)</div></div>
+      <div class="stat"><div class="val">60%+</div><div class="label">Of Sponsors Exploring AI Tools</div></div>
+    </div>
+
+    <div class="prose" style="margin-top: 24px;">
+      <p><strong>The single structural reality that governs every AI initiative in this vertical:</strong> Biomapas operates as a Data Processor under GDPR, not a Data Controller. Every clinical data record it touches — eCRF, safety, imaging, PK/PD — is owned by the sponsor. Any AI use case that trains on or processes trial-specific patient data requires explicit DPA amendment with each sponsor individually. This is not a blocker, but it is a sequencing constraint that must be built into every commercial conversation, every vendor evaluation, and every internal build decision. It is also one of the most important things to communicate clearly to leadership — because AI vendors will not volunteer this complexity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I — MARKET ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part I</span>What Is Actually Happening in the Market (May 2026)</div>
+    <h2>The macro shift is already priced in.</h2>
+
+    <div class="prose">
+      <p>The global CRO market was valued at approximately <strong>$72.5 billion in 2026</strong> and is projected to reach <strong>$154.9 billion by 2033</strong>. Within that, the AI-specific clinical operations automation sub-segment is growing at <strong>34.3% per year</strong>. By 2025, AI companies captured 55% of all health tech venture funding globally, up from 37% in 2024. Regulatory bodies including EMA and FDA are actively endorsing AI-powered solutions, with over 60% of clinical trial sponsors now exploring AI-based tools for data analysis and protocol design.</p>
+
+      <p>This is not speculative. Sponsors are already reweighting contract decisions: CROs that cannot demonstrate data-driven feasibility, automated compliance infrastructure, or AI-augmented delivery are being systematically de-prioritized in RFP scoring. Revised UK clinical trial regulations effective <strong>April 28, 2026</strong> introduce new requirements including mandatory public registration and results publication within 12 months — increasing administrative burden and making automation economically necessary, not optional. The EU Biotech Act and Digital Omnibus simplification proposals are adding further regulatory momentum for technology-enabled trial operations.</p>
+
+      <h3>Where large CROs are moving</h3>
+      <p>IQVIA deployed over 50 AI agents in production environments in Q3 2025, improving its Clinical Program Productivity Index by 12% in 2024. ICON has integrated generative AI for protocol drafting and regulatory automation. Veeva Systems — the platform that Biomapas almost certainly uses for Safety, CTMS, and eTMF — announced AI agent availability across all Vault applications through 2026: Safety and Quality from April 2026, Clinical Operations and Regulatory from August 2026. Critically, <strong>Veeva AI is usage-based</strong>, meaning even a mid-size CRO like Biomapas can access production-grade agentic AI without enterprise-scale investment, provided its Vault configuration is current and its processes are clean enough to benefit from automation.</p>
+
+      <p>The strategic implication: the technology infrastructure to automate significant portions of the Clinical Research/Operations workflow is becoming a <strong>licensing decision, not a build decision</strong> — but only for organizations whose internal processes and data are sufficiently structured to make use of it. This is where the maturity gap often sits in specialty CROs.</p>
+
+      <h3>The competitive threat in CEE</h3>
+      <p>Large global CROs are not Biomapas's primary competitive threat in Poland, Romania, Czech Republic, or the Baltics. They are overpriced and too process-heavy for the mid-size biotech sponsors who anchor Biomapas's client base. The actual threat is a new category of <strong>AI-native boutique CROs</strong> specifically capitalizing on the mid-market gap in Europe. Companies like Lindus Health (UK, AI-native CRO model, Series A raised 2022–2024), and several Eastern European technology-adjacent CRO startups are building with AI as a core operating assumption rather than a retrofit. If Biomapas does not close the capability gap within <strong>18–24 months</strong>, the positioning advantage in CEE becomes harder to defend on technology grounds — even if the site network and regulatory expertise remain genuinely superior.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART II — PROCESS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part II</span>Process-Level Analysis — Clinical Research/Operations Vertical</div>
+    <h2>Operationally the most complex service line Biomapas runs.</h2>
+
+    <div class="prose">
+      <p>The Clinical Research/Operations vertical spans <strong>12 service sub-lines</strong> — from Business Development and bid defense through Clinical Strategy, Study Start-Up, Early Phase Operations, Phase II–III Monitoring, Clinical Safety, Quality &amp; Compliance, Post-Marketing, Medical Devices (MDR), and M&amp;A Support — across a multi-jurisdiction geography covering EU-27, UK, Turkey, Georgia, and accessible CIS markets.</p>
+
+      <h3>What the process map reveals about AI readiness</h3>
+      <p>The existing process documentation is detailed and structurally sound. Three honest observations are worth naming before moving to opportunities:</p>
+    </div>
+
+    <ol class="questions">
+      <li>
+        <strong>The process map is built from publicly available information and operational logic.</strong>
+        <p>It correctly identifies the major workflows, but the actual friction points — where manual effort is highest, where errors accumulate, where time is lost — can only be validated by the people who run these processes daily. CRAs, Safety Processors, Regulatory Affairs leads, and Data Managers will have specific views that no external mapping can fully anticipate. Any innovation agenda must include structured interviews with these functional leads before committing to an automation roadmap.</p>
+      </li>
+      <li>
+        <strong>The FSP model creates a structurally different data situation than the full-service CRO model.</strong>
+        <p>In FSP engagements, Biomapas staff work inside sponsor systems — meaning Biomapas has no proprietary data asset in that context at all. This limits the AI surfaces available for internal tooling and makes the innovation agenda more dependent on sponsor-level contract conversations than the full-service model.</p>
+      </li>
+      <li>
+        <strong>The geographic coverage stated commercially is broader than the operational revenue concentration.</strong>
+        <p>Based on public evidence and operational logic, the markets where Biomapas has genuine operational depth — established site networks, locally placed CRAs, active client portfolios — are Poland, France, Belgium, UK, Romania, Czech Republic, Slovakia, Bulgaria, the Baltics, the Netherlands, and Turkey. CIS markets (Kazakhstan, Ukraine, Armenia, Azerbaijan, Moldova) are strategically important and worth the investment in regulatory intelligence, but they are not yet at the scale that justifies primary technology investment. Any vendor selection, partnership model, or automation tool must be evaluated against the EU core + UK + Turkey geography first.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PART III — VALUE TIERS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part III</span>Where Automation and AI Can Create Real Value</div>
+    <h2>A tiered roadmap, sequenced by GDPR exposure, technology maturity, and strategic value.</h2>
+
+    <!-- TIER 1 -->
+    <div class="tier-header">
+      <span class="tier-tag">Tier 1</span>
+      <h3>Compliance Automation — Non-Negotiable, Do It First</h3>
+    </div>
+    <p class="prose">These are the highest-priority automation opportunities. They operate on rules and structural data, carry no GDPR complexity, and the compliance risk of <strong>not</strong> building them is materially higher than any implementation risk. They are also the most credible things to demonstrate to pharma sponsors in bid defense — because they show that Biomapas operates with real-time quality infrastructure rather than periodic manual oversight.</p>
+
+    <div class="opp">
+      <h4>SUSAR Multi-Jurisdiction Routing Engine</h4>
+      <p>Routing SUSAR submissions across EudraVigilance (EU-27 via E2B R3), MHRA UK E2B gateway, TİTCK EBS (Turkey), and national MoH systems in CIS markets is currently manual coordination. Country-specific reporting timelines (Day 7 fatal, Day 15 non-fatal across all active markets) are fixed and known. A rules engine that auto-routes each case to the correct submission gateway based on case classification, study country authorization, and reporting timeline — with automated deadline alerts and submission confirmation logging — eliminates the single highest-risk compliance failure in the entire vertical. <strong>This is not an AI problem. It is a workflow automation problem with a well-defined solution.</strong></p>
+      <span class="impact">Estimated FTE impact: 30–40% of safety operations administrative overhead</span>
+    </div>
+
+    <div class="opp">
+      <h4>Real-Time eTMF Completeness Scoring</h4>
+      <p>The DIA eTMF Reference Model defines exactly which documents must be present at each study milestone. An automated completeness-scoring engine — cross-referencing expected documents against actual eTMF population, updated continuously — transforms inspection readiness from a periodic audit event into a live operational metric. Veeva Vault eTMF already provides the platform substrate; the question is whether the business rules layer is configured at study-specific granularity or left at generic level. <strong>Biomapas can offer sponsors a real-time eTMF health score as a bid defense differentiator.</strong> No mid-size CEE competitor currently does this as standard.</p>
+    </div>
+
+    <div class="opp">
+      <h4>Regulatory Calendar Automation</h4>
+      <p>EU CTIS (60–90 days), MHRA (30 days), TİTCK (45–60 days since the November 2025 QP Declaration equivalence update), Georgia MoH, Kazakhstan MoH — all have known authorization timelines with defined RFI windows, amendment notification requirements, and condition closure deadlines. An automated country clock tool that tracks all active regulatory submissions and flags upcoming deadlines removes one of the most common causes of study start-up slippage: intermediate deadline drift due to manual calendar management. Build internally first; productize as a sponsor-facing transparency dashboard within 12–18 months.</p>
+    </div>
+
+    <div class="opp">
+      <h4>SAE/EDC Automated Reconciliation</h4>
+      <p>The reconciliation between Vault Safety and EDC platforms (Medidata Rave, Oracle Clinical One, Veeva EDC) is a known integration problem with known solutions. Medidata's platform offers partial native reconciliation; Veeva's AI agent layer (April 2026 release for Safety) will extend this further. The decision point for Biomapas is whether to rely on vendor-native tooling or build a custom cross-platform reconciliation layer capable of working across the multiple EDC systems encountered in multi-sponsor FSP engagements. <strong>If FSP represents more than 40% of revenue, a cross-platform approach becomes a genuine internal asset.</strong></p>
+    </div>
+
+    <!-- TIER 2 -->
+    <div class="tier-header">
+      <span class="tier-tag t2">Tier 2</span>
+      <h3>AI-Assisted Processes — License First, Build Only Where Proprietary Data Creates Advantage</h3>
+    </div>
+
+    <div class="opp">
+      <h4>MedDRA Auto-Coding</h4>
+      <p>NLP models trained on MedDRA terminology hierarchies now achieve <strong>70–80% auto-coding accuracy</strong> on adverse event narratives at commercial maturity. Veeva Vault Safety already includes MedDRA auto-coding functionality (available since the 20R2 release). Saama Technologies, which won Best AI-Based Solution for Life Sciences in 2024, offers modular AI agents directly applicable to ICSR coding workflows. Veeva's 2026 Clinical Data Trend Report identifies medical coding as the clearest near-term winner for AI augmentation. The correct Biomapas move is to activate this within the existing Vault configuration and measure auto-coding throughput before evaluating additional vendors.</p>
+      <span class="impact">At 500+ cases per month portfolio-wide → significant recovered Medical Coder capacity</span>
+    </div>
+
+    <div class="opp">
+      <h4>ICSR Narrative Auto-Generation</h4>
+      <p>The structured data already in Vault Safety — patient demographics, event description, suspect product, concomitant medications, medical history — is sufficient to generate a regulatory-quality ICSR narrative draft using an LLM with constrained output format. The draft requires Medical Monitor QC review before submission, but the generation step (currently 45–60 minutes per case at specialist rates) can be reduced to a 10–15 minute review workflow. <strong>At portfolio scale, this is a 60–70% reduction in per-case narrative production time.</strong> Veeva's emerging AI layer within Vault Safety and Saama's Clinical AI Agents are the primary platforms to evaluate. This is a licensing decision, not a build candidate.</p>
+    </div>
+
+    <div class="opp">
+      <h4>Monitoring Visit Report (MVR) Auto-Generation</h4>
+      <p>CRAs currently spend 3–5 hours per monitoring visit composing a structured MVR from visit notes and EDC observations. An LLM-based drafting tool that ingests a structured digital visit checklist — EDC query status, deviations observed, IMP accountability, consent binder status — and generates a draft report reduces this to a review-and-approve workflow. Across a portfolio of 50 active sites visited every 6–8 weeks, this represents approximately <strong>2,000 CRA-hours per year</strong> in recovered capacity — equivalent to roughly <strong>€120,000–€180,000 in redeployable CRA time</strong> without additional headcount, at CEE market rates. Within reach via Veeva AI (August 2026 release for Clinical Operations) or a custom LLM integration against a structured template.</p>
+    </div>
+
+    <div class="opp">
+      <h4>Protocol Consistency Checker</h4>
+      <p>A protocol contains internal logical dependencies — inclusion/exclusion criteria must align with primary endpoints; the schedule of assessments must be consistent with the statistical analysis plan; prohibited medications must be consistent with indication-specific standards of care. An NLP cross-check engine that flags inconsistencies before CTA submission prevents expensive protocol amendments. Typical amendment cost in EU clinical trials: <strong>€50,000–€200,000 per study</strong>, including regulatory fees, re-submission timelines, and clinical delays. Biomapas's corpus of previously authored protocols — if systematically catalogued and cleaned — provides training material that creates a proprietary advantage over a generic off-the-shelf tool. Tier 2 build candidate over 12–18 months, contingent on confirming a structured protocol archive.</p>
+    </div>
+
+    <div class="opp">
+      <h4>Enrollment Prediction Model — The Proprietary Asset</h4>
+      <p>The underutilized data asset in the entire operation is the <strong>internal site performance history</strong>: enrollment rates, screen failure ratios, monitoring findings, and deviation patterns accumulated across 20+ years of CEE and CIS site operations. An ML model trained on this data — combined with public data from ClinicalTrials.gov, CTIS, and TrialHub benchmarking — generates enrollment timeline predictions in bid defense that are validated against actual historical performance, not estimated from public benchmarks. <strong>This is a competitive differentiator that no CEE-regional competitor can replicate without equivalent site network depth.</strong> The key question is whether this data exists in structured, queryable form (extractable from CTMS/eTMF) or in unstructured form. If the latter is true, the first investment is data structuring and ETL architecture, not model building.</p>
+    </div>
+
+    <!-- TIER 3 -->
+    <div class="tier-header">
+      <span class="tier-tag t3">Tier 3</span>
+      <h3>Advanced AI — Partnership and Investment Logic</h3>
+    </div>
+
+    <div class="opp">
+      <h4>EHR Pre-Screening at Anchor Sites</h4>
+      <p>Patient recruitment delays account for approximately <strong>30% of total clinical trial timelines</strong>. AI pre-screening of EHR data against protocol eligibility criteria — identifying eligible patients before a research coordinator manually reviews charts — is now commercially deployed at scale. ConcertAI and Deep6.ai are the leading players; both are expanding EU operations in 2025–2026. The access constraint for a CRO is real: hospital EHR data is held by the institution, not the CRO. The solution path is a formal data access agreement with 3–5 anchor sites in EU countries — the markets with the deepest existing site relationships — granting read access to de-identified EHR data under GDPR-compliant research frameworks. <strong>This is a 12–18 month legal and compliance project before any technology deployment.</strong> But if executed, it transforms Biomapas's enrollment credibility from historical rate benchmarking to real-time patient pool sizing.</p>
+    </div>
+
+    <div class="opp">
+      <h4>Digital Twins / Synthetic Control Arms</h4>
+      <p><a href="https://www.unlearn.ai" target="_blank" rel="noopener">Unlearn.ai</a> (funded at $130M+, backed by Altimeter Capital and Insight Partners, EMA positive opinion on TwinRCT™ methodology, active Merck KGaA partnership) is the market leader in generative AI for synthetic control arms. Their technology allows Phase II/III trials to reduce control arm size by generating AI-predicted placebo outcomes — directly reducing patient burden and trial cost. For Biomapas, the most pragmatic engagement model is a <strong>commercial referral or co-marketing arrangement</strong>: Biomapas, as the managing CRO for Phase II/III oncology studies in CEE, recommends or integrates Unlearn's methodology to sponsors seeking adaptive designs. This differentiates Biomapas in oncology bid defense, particularly in markets like Poland and Czech Republic where patient pools are limited and enrollment competition is high. A formal partnership conversation with Unlearn is worth initiating.</p>
+    </div>
+
+    <div class="opp">
+      <h4>RWE / PASS Study Data Infrastructure</h4>
+      <p>Post-Marketing (PASS, PAES, non-interventional studies) is a growing service line. The long-term trajectory of this service is secondary use of real-world EHR data for observational study design, not primary data collection at investigative sites. France's Health Data Hub and UK NHS Digital provide structured EHR access frameworks for approved research. In France — a high-revenue Biomapas market — SNDS (Système National des Données de Santé) access for authorized research organizations is an established pathway. A <strong>24-month strategic project</strong> to qualify Biomapas as an authorized data user in France and UK unlocks new PASS study capability that competitors without established regulatory presence cannot easily access. Potential technology partners: TriNetX, Aetion, Flatiron Health.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART IV — VENDOR LANDSCAPE ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part IV</span>AI Vendor Landscape — Evaluated for Biomapas's Profile</div>
+    <h2>Three filters: EU/CEE/UK/Turkey relevance, data-processor applicability, and the right model — license, partner, or acquire.</h2>
+
+    <p class="prose">The following evaluation applies three criteria specific to Biomapas's context: (1) relevance to the EU/CEE/UK/Turkey geographic core, (2) applicability to a data processor rather than a data controller, and (3) whether a licensing, partnership, or acquisition model is more appropriate given Biomapas's scale and revenue target.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Core Capability</th>
+            <th>Relevance to Biomapas</th>
+            <th>Recommended Model</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Veeva Systems</td>
+            <td>Full clinical suite (Vault Safety, CTMS, eTMF) + AI agent layer launching 2026</td>
+            <td>Critical — likely existing platform; Safety AI April 2026, Clinical Ops AI August 2026</td>
+            <td>Existing vendor; activate AI modules; negotiate pricing</td>
+            <td><span class="priority p-now">Immediate</span></td>
+          </tr>
+          <tr>
+            <td>Saama Technologies</td>
+            <td>Agentic AI for MedDRA coding, ICSR narrative generation, site monitoring</td>
+            <td>High — modular agents deployable within existing Vault Safety workflows</td>
+            <td>SaaS licensing; white-label potential</td>
+            <td><span class="priority p-mid">6–12 months</span></td>
+          </tr>
+          <tr>
+            <td>TrialHub (Scott Health)</td>
+            <td>Clinical trial benchmarking for site selection and enrollment modeling</td>
+            <td>Currently licensed by Biomapas; direct bid defense application</td>
+            <td>Deepen to API-level integration for enrollment prediction model</td>
+            <td><span class="priority p-now">Immediate</span></td>
+          </tr>
+          <tr>
+            <td>Unlearn.ai</td>
+            <td>Digital twins / synthetic control arms; EMA-qualified TwinRCT™</td>
+            <td>High for oncology Phase II/III — differentiator in CEE bid defense</td>
+            <td>Commercial referral or co-marketing partnership</td>
+            <td><span class="priority p-mid">6–18 months</span></td>
+          </tr>
+          <tr>
+            <td>Phesi</td>
+            <td>AI-driven feasibility and site selection analytics</td>
+            <td>High — directly applicable to bid defense and TrialHub augmentation</td>
+            <td>API integration or white-label feasibility tool</td>
+            <td><span class="priority p-mid">12–18 months</span></td>
+          </tr>
+          <tr>
+            <td>ConcertAI</td>
+            <td>AI patient matching using real-world oncology EHR data</td>
+            <td>High for EU oncology site network pre-screening; EU expansion active</td>
+            <td>Site data partnership + technology licensing</td>
+            <td><span class="priority p-late">18–24 months</span></td>
+          </tr>
+          <tr>
+            <td>Deep6.ai</td>
+            <td>AI phenotyping from EHR for patient eligibility pre-screening</td>
+            <td>High for CEE anchor site partnerships</td>
+            <td>Data access agreement + licensing</td>
+            <td><span class="priority p-late">18–24 months</span></td>
+          </tr>
+          <tr>
+            <td>TriNetX</td>
+            <td>Real-world data network with EU node coverage</td>
+            <td>Medium-high for PASS/NIS study design in France, UK, Belgium</td>
+            <td>Data access network subscription</td>
+            <td><span class="priority p-late">18–24 months</span></td>
+          </tr>
+          <tr>
+            <td>Medidata (3DS)</td>
+            <td>EDC + CTMS + "AI Intelligent Trials" analytics layer</td>
+            <td>Critical — Biomapas likely uses Medidata Rave; evaluate AI tier inclusion</td>
+            <td>Existing vendor; negotiate AI module activation</td>
+            <td><span class="priority p-mid">6–12 months</span></td>
+          </tr>
+          <tr>
+            <td>Innoplexus</td>
+            <td>AI regulatory intelligence monitoring</td>
+            <td>Medium — regulatory intelligence augmentation for CIS/Turkey markets</td>
+            <td>SaaS subscription; monitor before commitment</td>
+            <td><span class="priority p-late">12–24 months</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="prose" style="margin-top: 24px;"><strong>A note on US-headquartered vendors.</strong> ConcertAI, Deep6.ai, and Aetion are US-originated but have active EU expansion programs. The relevant question for a data processor operating under GDPR is not country of origin but <strong>EU data residency compliance and GDPR processor chain integrity</strong>. Each requires specific data residency and subprocessor agreement review before any trial-related data can flow through their systems. This is the legal infrastructure that must be built before the technology relationship becomes operational.</p>
+  </div>
+</section>
+
+<!-- ============ PART V — ROLE ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part V</span>What a Head of Research &amp; Innovation Would Actually Own</div>
+    <h2>The scope is substantial enough to justify a dedicated function. The question is sequencing and realism.</h2>
+
+    <p class="prose">Based on the Clinical Research/Operations vertical analysis alone — without yet mapping Pharmacovigilance — the scope of work is substantial enough to justify a dedicated function.</p>
+
+    <div class="phases">
+      <div class="phase">
+        <span class="step-num">01</span>
+        <div class="horizon">Months 0–6</div>
+        <h4>Internal Validation</h4>
+        <p>Confirm which process steps are actually highest-friction in practice (vs. what documentation suggests). Assess the state of Biomapas's internal operational data — is site performance history queryable? is the protocol archive structured? Audit current Veeva Vault configuration against AI agent readiness. Identify two or three Tier 1 automation builds deliverable within the year. Map the contractual landscape — what DPA language needs to be added to new MSAs to enable future AI use of sponsor data with consent.</p>
+      </div>
+      <div class="phase">
+        <span class="step-num">02</span>
+        <div class="horizon">Months 3–18</div>
+        <h4>Tier 2 AI Integration</h4>
+        <p>Activate Veeva AI agent modules for Safety and Clinical Operations as they become available (April and August 2026 respectively). Pilot MedDRA auto-coding and MVR drafting. Launch enrollment prediction model development using internal site performance data. Initiate the first conversations with 2–3 anchor sites in EU countries about EHR data access agreements.</p>
+      </div>
+      <div class="phase">
+        <span class="step-num">03</span>
+        <div class="horizon">Months 12–36</div>
+        <h4>Tier 3 — Strategic Capability</h4>
+        <p>PASS/RWE data infrastructure development, EHR pre-screening operationalization, potential partnership with Unlearn.ai for oncology adaptive designs, and evaluation of acquisition targets in the €5–20M range for capabilities strategically valuable to own — e.g., a CEE-focused regulatory intelligence platform or a specialty feasibility analytics tool with a regional data moat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART VI — WORKSHOP ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part VI</span>What Needs to Be Understood Before the Workshop</div>
+    <h2>The workshop is not a formatting exercise — it is where the assumptions get tested.</h2>
+
+    <p class="prose">The process mapping prepared to date covers the external-facing process architecture of the Clinical Research/Operations vertical with sufficient depth to identify automation and AI insertion points. What it cannot do — and what no external analysis can do — is <strong>validate the internal operational reality</strong>.</p>
+
+    <ol class="questions">
+      <li>
+        <strong>Data state of internal operational assets</strong>
+        <p>Is enrollment performance history by site, by indication, by country queryable from current CTMS? In what format does the protocol archive exist? Is monitoring visit history (deviations, queries, findings) structured or unstructured?</p>
+      </li>
+      <li>
+        <strong>FSP vs. full-service split</strong>
+        <p>What proportion of Clinical Research/Operations revenue comes from FSP engagements? This determines the degree to which Biomapas controls the systems and data architecture that AI initiatives depend on.</p>
+      </li>
+      <li>
+        <strong>Current Veeva configuration maturity</strong>
+        <p>Which Vault modules are live? Is the eTMF implementation using current DIA reference model mapping? Are AI agent tiers already contracted or not yet activated?</p>
+      </li>
+      <li>
+        <strong>Existing sponsor DPA language</strong>
+        <p>Do current MSA templates include any provision for anonymized data use for internal quality improvement or product development? If not, this needs to be a new standard clause — and it is a commercial conversation, not just a legal one.</p>
+      </li>
+      <li>
+        <strong>The CIS revenue reality</strong>
+        <p>What proportion of active studies currently run in Kazakhstan, Ukraine, or Armenia? Understanding the actual revenue weight in CIS markets is important for prioritizing the regulatory intelligence and CRA capacity investments correctly.</p>
+      </li>
+    </ol>
+
+    <p class="prose" style="margin-top: 32px;">These questions cannot be answered in a one-day workshop that starts from a blank page. The process mapping done to date means the workshop can start from a structured hypothesis set — which services have the highest automation potential, which data assets are genuinely Biomapas-owned and usable, which vendor relationships to activate first — and use the session to validate or challenge those hypotheses against internal operational reality.</p>
+  </div>
+</section>
+
+<!-- ============ PART VII — REVENUE TARGET ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-label"><span class="num">Part VII</span>Honest Assessment of the €200M Revenue Target</div>
+    <h2>Three pathways, three time horizons, three certainty levels.</h2>
+
+    <p class="prose">Biomapas has set a revenue target of <strong>€200M by 2030</strong>. In the context of the Clinical Research/Operations vertical alone, AI augmentation and innovation contribute to that target in three distinct ways — each with different time horizons and certainty levels.</p>
+
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="certainty">Highest certainty · Near-term</div>
+        <h4>Margin improvement through automation</h4>
+        <p>SUSAR routing engines, eTMF completeness scoring, MVR auto-generation, and MedDRA auto-coding together can recover meaningful FTE capacity without headcount growth. This does not directly increase revenue, but it improves margin per study and allows the same team to absorb more studies — the operative growth mechanism for a specialty CRO.</p>
+      </div>
+      <div class="rev-card med">
+        <div class="certainty">Medium certainty · 12–24 months</div>
+        <h4>Win rate improvement through data-driven bid defense</h4>
+        <p>An enrollment prediction model built on internal site performance data, combined with TrialHub integration at the API level, creates a genuinely differentiated bid defense narrative — one that Biomapas can show sponsors with historical validation rather than estimated benchmarks. For a company running 20–30 bid defenses per year, improving win rate by 10–15 percentage points has a direct revenue consequence.</p>
+      </div>
+      <div class="rev-card low">
+        <div class="certainty">Longest horizon · Highest uncertainty</div>
+        <h4>New revenue streams through product and partnership</h4>
+        <p>PASS/RWE data services, EHR pre-screening partnerships at CEE anchor sites, and potential Unlearn.ai co-marketing for adaptive oncology designs represent revenue expansion opportunities — but require 18–36 months of legal, partnership, and technology groundwork. Real opportunities, but value-creating optionality, not the core path.</p>
+      </div>
+    </div>
+
+    <p class="prose" style="margin-top: 40px;">The €200M target is most credibly supported by a combination of: <strong>deepening the EU core market position</strong> (Poland, France, Belgium, UK, Romania, Czech Republic) using AI-enabled operational efficiency as a differentiator; <strong>defending and growing the CEE and Turkey early-phase oncology pipeline</strong> where Biomapas has genuine depth; and <strong>selectively adding capability in post-marketing and RWE services</strong> where the regulatory expertise already exists and the market is growing. Innovation investment should be calibrated to accelerate that strategy — not replace it with a technology-first narrative that the operational infrastructure is not yet ready to deliver.</p>
+  </div>
+</section>
+
+<!-- ============ CONCLUSION ============ -->
+<section class="conclusion">
+  <div class="wrap">
+    <div class="section-label"><span class="num">Conclusion</span>The Honest Case for the Role</div>
+    <h2>Not a technology-buying exercise — a multi-year capability program.</h2>
+
+    <div class="prose-wide">
+      <p>The Head of Research &amp; Innovation function makes sense for Biomapas if — and only if — leadership is prepared for what building this capability actually requires. It is not a technology buying exercise. It is a multi-year program that begins with data governance and internal process validation, moves through targeted automation and vendor integration, and reaches advanced AI applications only when the foundational legal and operational infrastructure supports them.</p>
+
+      <p>The value this role creates is measurable: faster, more defensible bid defense, lower per-study operational cost, higher inspection readiness, and — over time — proprietary data products that competitors cannot easily replicate. What it requires from leadership is patience with the sequencing, willingness to have DPA and data governance conversations with sponsors, and realistic timelines that reflect the GDPR-constrained operating environment.</p>
+
+      <div class="pull">
+        The opportunity is not to become an AI company. It is to become <em>the most credible specialist CRO in CEE and broader Europe</em> — one that can prove its operational claims with data. That is a commercially realistic ambition, and it is achievable within the 2030 horizon if the work starts now.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <h5>Sources &amp; Methodology</h5>
+    <p>Prepared based on publicly available information: Biomapas website and LinkedIn presence, EMA/CTIS regulatory framework documentation, Veeva Systems 2026 Clinical Data Trend Report, Fortune Business Insights AI Clinical Trials Market Report (April 2026), ClinicalTrialsArena 2026 trend analysis, BioSpace CRO priorities analysis (December 2025), Intel Market Research AI Clinical Trial Solutions outlook, and operational knowledge of the GCP/ICH regulatory environment across EU, UK, Turkey, and accessible CIS markets.</p>
+    <p>Internal process assumptions require validation with Biomapas clinical operations leadership &amp; team.</p>
+
+    <div class="sig">
+      <div class="author">
+        <span>Author</span>
+        Raimonda Pilipavičiūtė
+      </div>
+      <div class="legal">© 2026 · Strategic Briefing · Confidential — Prepared for Biomapas Leadership Review</div>
+    </div>
+  </div>
+</footer>
+
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
